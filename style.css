@@ -125,6 +125,8 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
     font-size: 14px;
+    color: #aaa;
+}
     
     /* CARD LADO A LADO */
 .card-destaque {
