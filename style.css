@@ -125,5 +125,47 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
     font-size: 14px;
+    
+    /* CARD LADO A LADO */
+.card-destaque {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* IMAGEM */
+.card-destaque img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TEXTO */
+.card-destaque .info {
+  max-width: 500px;
+}
+
+.card-destaque h3 {
+  margin-bottom: 10px;
+}
+
+.card-destaque p {
+  color: #ccc;
+}
+
+/* RESPONSIVO (CELULAR) */
+@media (max-width: 768px) {
+  .card-destaque {
+    flex-direction: column;
+  }
+
+  .card-destaque img {
+    width: 100%;
+  }
     color: #aaa;
 }
