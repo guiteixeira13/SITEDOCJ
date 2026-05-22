@@ -29,12 +29,11 @@ body {
 }
 
 /* MENU */
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #ccc;
-  transition: 0.3s;
-  position: relative;
+.nav {
+  display: flex;
+  justify-content: center; /* CENTRALIZA */
+  gap: 30px; /* espaço entre os itens */
+  margin-top: 10px;
 }
 
 .nav a:hover {
