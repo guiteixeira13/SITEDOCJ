@@ -1,49 +1,184 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  background: #000;
+  color: #fff;
+}
+
 /* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 10%;
   background: #111;
-  color: #fff;
 }
 
-/* MENU NORMAL */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* MENU */
 .nav {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-/* BOTÃO HAMBURGUER */
+.nav a:hover {
+  color: #fff;
+}
+
+/* HAMBURGUER */
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  flex-direction: column;
   cursor: pointer;
 }
 
-/* RESPONSIVO */
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav {
-    display: none;
-    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
     background: #000;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 20px;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: 0.4s;
   }
 
   .nav.active {
-    display: flex;
+    right: 0;
   }
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SEÇÃO */
+.section {
+  padding: 60px 10%;
+}
+
+/* HOME CENTRALIZADO */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.container {
+  max-width: 700px;
+}
+
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* PROJETOS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #ccc;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
 }
